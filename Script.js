@@ -1,5 +1,8 @@
 import entradaDados from "readline-sync";
-import listaDeFrutas from "./dados/dados.js";
+import listaDeFrutas from "./Dados/Dados.js";
+import criarConta from "./Funcoes/Funcoes.js";
+import acessos from "./Dados/Login.js";
+
 import {
   validarLetraDigitada,
   verificarJogoGanho,
@@ -7,7 +10,11 @@ import {
   jogadasRestantes,
   atualizarPalavraOculta,
   exibirMensagemFimDeJogo,
+  logar,
 } from "./Funcoes/Funcoes.js";
+
+let usuario = "admin";
+let senha = "admin";
 
 function jogarForca() {
 
@@ -55,4 +62,5 @@ function jogarForca() {
 
 };
 
+criarConta();
 jogarForca();
